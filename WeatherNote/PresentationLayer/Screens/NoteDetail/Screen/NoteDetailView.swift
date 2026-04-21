@@ -9,9 +9,11 @@ import SwiftUI
 
 struct NoteDetailView<ViewModel: NoteDetailViewModelType>: View {
     @StateObject private var viewModel: ViewModel
+  
+    // MARK: - Lifecycle
     
-    init(viewModel: ViewModel) {
-        _viewModel = StateObject(wrappedValue: viewModel)
+    init(viewModel: @autoclosure @escaping () -> ViewModel) {
+        _viewModel = StateObject(wrappedValue: viewModel())
     }
     
     var body: some View {
