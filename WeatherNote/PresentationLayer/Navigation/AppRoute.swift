@@ -11,7 +11,7 @@ import SwiftUI
 // All possible navigation destinations
 enum AppRoute: Hashable {
     case addNote
-    case noteDetail(Note)
+    case noteDetail(NoteModel)
 }
 
 final class AppRouter: ObservableObject {

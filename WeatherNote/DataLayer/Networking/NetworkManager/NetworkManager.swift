@@ -1,5 +1,5 @@
 //
-//  NetworkManager.swift
+//  NetworkService.swift
 //  WeatherNote
 //
 //  Created by Ostap Marchenko on 21.04.2026.
@@ -9,22 +9,30 @@ import Foundation
 
 final class NetworkService: NetworkServiceProtocol {
     private let session: URLSession
-    private let baseURL = "https://api.openweathermap.org/data/2.5"
-    private let apiKey = "API_KEY"
+    private let baseURL = "https://api.openweathermap.org/data/3.0"
+    private let apiKey = "ccad92a869f1d242475b4ee534460fb0"
 
     init(session: URLSession = .shared) {
         self.session = session
     }
 
     func execute<T: Decodable>(_ request: APIRequest) async throws -> T {
-        var components = URLComponents(string: baseURL + request.path)
+        guard var components = URLComponents(string: baseURL + request.path) else {
+            throw URLError(.badURL)
+        }
         
+        // Setup shared query parameters
         var queryItems = request.queryItems ?? []
-        queryItems.append(URLQueryItem(name: "appid", value: apiKey))
-        queryItems.append(URLQueryItem(name: "units", value: "metric"))
-        components?.queryItems = queryItems
+        queryItems.append(contentsOf: [
+            URLQueryItem(name: "appid", value: apiKey),
+            URLQueryItem(name: "units", value: "metric")
+        ])
+        
+        components.queryItems = queryItems
 
-        guard let url = components?.url else { throw URLError(.badURL) }
+        guard let url = components.url else {
+            throw URLError(.badURL)
+        }
         
         var urlRequest = URLRequest(url: url)
         urlRequest.httpMethod = request.method.rawValue
@@ -36,6 +44,10 @@ final class NetworkService: NetworkServiceProtocol {
             throw URLError(.badServerResponse)
         }
 
-        return try JSONDecoder().decode(T.self, from: data)
+        // Using snake_case strategy for API 3.0 compatibility
+        let decoder = JSONDecoder.defaultDecoder
+        
+        return try decoder.decode(T.self, from: data)
     }
 }
+

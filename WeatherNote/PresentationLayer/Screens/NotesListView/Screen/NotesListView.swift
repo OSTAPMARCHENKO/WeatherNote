@@ -18,12 +18,12 @@ struct NotesListView<ViewModel: NotesListViewModelType>: View {
     
     
     var body: some View {
-        Group {
+        VStack {
             if viewModel.notes.isEmpty {
                 emptyStateView
             } else {
-                List(viewModel.notes) { note in
-                    NoteCellView(note: note, dateString: viewModel.formatDate(note.createdAt))
+                List(viewModel.notes, id: \.id) { note in
+                    NoteCellView(titleText: note.titleText, dateString: note.dateString, temperatureString: note.temperatureString, hasWeather: note.hasWeather)
                         .contentShape(Rectangle())
                         .onTapGesture {
                             viewModel.selectNote(note)

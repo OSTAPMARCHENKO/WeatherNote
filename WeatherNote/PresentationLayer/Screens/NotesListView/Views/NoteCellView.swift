@@ -7,24 +7,27 @@
 
 import SwiftUI
 
-struct NoteCellView<Model: NoteListNoteModelType>: View {
-    let model: Model
+struct NoteCellView: View {
+    var titleText: String
+    var dateString: String
+    var temperatureString: String?
+    var hasWeather: Bool
     
     var body: some View {
         HStack(alignment: .top, spacing: 12) {
             VStack(alignment: .leading, spacing: 6) {
-                Text(model.titleText)
+                Text(titleText)
                     .font(.headline)
                     .lineLimit(2)
                 
-                Text(model.dateString)
+                Text(dateString)
                     .font(.caption)
                     .foregroundColor(.secondary)
             }
             
             Spacer()
             
-            if model.hasWeather, let temp = model.temperatureString {
+            if hasWeather, let temp = temperatureString {
                 VStack(alignment: .trailing, spacing: 4) {
                     Text(temp)
                         .font(.subheadline.bold())

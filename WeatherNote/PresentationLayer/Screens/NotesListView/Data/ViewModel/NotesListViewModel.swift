@@ -13,7 +13,7 @@ final class NotesListViewModel: BaseViewModel, NotesListViewModelType {
     // MARK: - Action typealiases
     
     typealias EmptyAction = () -> Void
-    typealias NoteAction = (_ note: Note) -> Void
+    typealias NoteAction = (_ note: NoteModel) -> Void
     
     // MARK: - Nested
     
@@ -24,7 +24,7 @@ final class NotesListViewModel: BaseViewModel, NotesListViewModelType {
     
     // MARK: - Published
     
-    @Published var notes: [NoteModel] = []
+    @Published var notes: [NoteListNoteModelType] = []
     
     // MARK: - Properties(Private)
     
@@ -42,16 +42,22 @@ final class NotesListViewModel: BaseViewModel, NotesListViewModelType {
     
     // MARK: - Methods(Public)
     
-    func loadData() async {
-        repository.loadNotes()
+    func loadData() {
+        let notes = repository.getAllNotes()
+        
+        self.notes = notes.map{ NoteListNoteModel(id: $0.id.uuidString, domainNote: $0) }
     }
     
-    func addNewNote() async {
+    func addNewNote() {
         events.showAddNote()
     }
     
-    func selectNote(_ note: NoteModel) {
-        events.showNoteDetails(note)
+    func selectNote(_ note: NoteListNoteModelType) {
+        guard let note = note as? NoteListNoteModel else {
+            return
+        }
+        
+        events.showNoteDetails(note.domainNote)
     }
     
     func formatDate(_ date: Date) -> String {
@@ -68,7 +74,7 @@ final class NotesListViewModel: BaseViewModel, NotesListViewModelType {
         repository.notesPublisher
             .receive(on: DispatchQueue.main)
             .sink { [weak self] updatedNotes in
-                self?.notes = updatedNotes
+                self?.notes = updatedNotes.map{ NoteListNoteModel(id: $0.id.uuidString, domainNote: $0) }
             }
             .store(in: &cancellables)
     }

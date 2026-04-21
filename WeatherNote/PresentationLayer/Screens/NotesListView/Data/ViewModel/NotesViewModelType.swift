@@ -8,10 +8,10 @@
 import Foundation
 
 protocol NotesListViewModelType: BaseViewModelType {
-    var notes: [NoteModel] { get }
+    var notes: [NoteListNoteModelType] { get }
     
     func loadData()
     func addNewNote()
-    func selectNote(_ note: NoteModel)
+    func selectNote(_ note: NoteListNoteModelType)
     func formatDate(_ date: Date) -> String
 }

@@ -7,8 +7,6 @@
 
 import Foundation
 
-import Foundation
-
 protocol NoteListNoteModelType {
     var id: String { get }
     var titleText: String { get }
@@ -19,10 +17,22 @@ protocol NoteListNoteModelType {
 
 struct NoteListNoteModel: NoteListNoteModelType, Identifiable {
     let id: String
-    private(set) var titleText: String
-    private(set) var dateString: String
-    private(set) var temperatureString: String?
-    private(set) var hasWeather: Bool
+    var titleText: String {
+        domainNote.text
+    }
+    var dateString: String {
+        domainNote.createdAt.formattedForNote()
+    }
+    var temperatureString: String? {
+        guard let temp = domainNote.weather?.formattedTemp else {
+            return "--"
+        }
+        
+        return String(temp)
+    }
+    var hasWeather: Bool {
+        domainNote.weather != nil
+    }
     
     let domainNote: NoteModel
 }

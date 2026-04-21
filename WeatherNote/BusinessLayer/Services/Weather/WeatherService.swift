@@ -14,13 +14,14 @@ final class WeatherService: WeatherServiceType {
         self.network = network
     }
 
+    // TODO: Use coordinates
     func fetchWeather(for city: String) async throws -> WeatherInfoModel {
-        let request = GetWeatherRequest(city: city)
+        let request = GetWeatherRequest()
         let dto: WeatherModelResponse = try await network.execute(request)
         
         // Mapping DTO to Domain Model
         return WeatherInfoModel(
-            temp: dto.main?.temp,
+            temp: dto.main.temp,
             description: dto.weather?.first?.description,
             iconCode: dto.weather?.first?.icon,
             locationName: dto.name

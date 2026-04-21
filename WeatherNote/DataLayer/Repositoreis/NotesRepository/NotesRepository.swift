@@ -26,17 +26,17 @@ final class NotesRepository: NotesRepositoryType {
     }
     
     func getAllNotes() -> [NoteModel] {
-        return notesSubject.value
-    }
-
-    func loadNotes() {
         let savedNotes: [NoteModel] = storage.load(key: storageKey) ?? []
         notesSubject.send(savedNotes)
+        
+        return savedNotes
     }
+
 
     func createNote(text: String) async throws -> NoteModel {
         let weather = try? await weatherService.fetchWeather(for: "Kyiv")
         
+        print(weather)
         // Create and save
         let newNote = NoteModel(text: text, weather: weather)
         var currentNotes = notesSubject.value

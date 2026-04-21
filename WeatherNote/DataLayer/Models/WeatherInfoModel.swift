@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct WeatherInfoModel: Codable {
+struct WeatherInfoModel: Codable, Equatable, Hashable {
     let temp: Double?
     let description: String?
     let iconCode: String?
