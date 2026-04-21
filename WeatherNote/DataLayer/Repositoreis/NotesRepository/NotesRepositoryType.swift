@@ -6,8 +6,12 @@
 //
 
 import Foundation
+import Combine
 
 protocol NotesRepositoryType {
+    var notesPublisher: AnyPublisher<[NoteModel], Never> { get }
+    
     func getAllNotes() -> [NoteModel]
     func createNote(text: String) async throws -> NoteModel
 }
+

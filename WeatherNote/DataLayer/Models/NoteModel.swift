@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct NoteModel {
+struct NoteModel: Codable {
     let id: UUID
     let text: String
     let createdAt: Date

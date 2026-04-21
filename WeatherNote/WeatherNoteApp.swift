@@ -10,13 +10,52 @@ import CoreData
 
 @main
 struct WeatherNoteApp: App {
-    let persistenceController = PersistenceController.shared
-
+    @StateObject private var router: AppRouter
+    
+    init() {
+        setupDependencies()
+        let appRouter = DIContainer.shared.resolve(AppRouter.self)
+        _router = StateObject(wrappedValue: appRouter)
+    }
+    
     var body: some Scene {
         WindowGroup {
-            ContentView()
-                .environment(\.managedObjectContext, persistenceController.container.viewContext)
+            NavigationStack(path: $router.path) {
+                NotesListView(viewModel: makeNotesListViewModel())
+                    .navigationDestination(for: AppRoute.self) { route in
+                        switch route {
+                        case .addNote:
+                            AddNoteView(viewModel: makeAddNoteViewModel())
+                            
+                        case .noteDetail(let noteModel):
+                            NoteDetailView(viewModel: NoteDetailViewModel(note: noteModel))
+                        }
+                    }
+            }
         }
+    }
+    
+    // MARK: - ViewModel Factories
+    
+    private func makeNotesListViewModel() -> NotesListViewModel {
+        let events = NotesListViewModel.Events(
+            showAddNote: {
+                router.push(.addNote)
+            },
+            showNoteDetails: { noteModel in
+                router.push(.noteDetail(noteModel))
+            }
+        )
+        return NotesListViewModel(events: events)
+    }
+    
+    private func makeAddNoteViewModel() -> AddNoteViewModel {
+        let events = AddNoteViewModel.Events(
+            close: {
+                router.pop()
+            }
+        )
+        return AddNoteViewModel(events: events)
     }
 }
 

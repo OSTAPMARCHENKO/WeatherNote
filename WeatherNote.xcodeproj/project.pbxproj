@@ -32,6 +32,18 @@
 		84F752042F97A23C00DF3082 /* UserDefaultsStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84F752032F97A23C00DF3082 /* UserDefaultsStorage.swift */; };
 		84F752072F97A26100DF3082 /* NotesRepositoryType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84F752062F97A26100DF3082 /* NotesRepositoryType.swift */; };
 		84F752092F97A26700DF3082 /* NotesRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84F752082F97A26700DF3082 /* NotesRepository.swift */; };
+		84F752132F97A56900DF3082 /* NotesListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84F752122F97A56900DF3082 /* NotesListViewModel.swift */; };
+		84F752162F97A80A00DF3082 /* BaseViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84F752152F97A80A00DF3082 /* BaseViewModel.swift */; };
+		84F752182F97A84500DF3082 /* DIPropertyWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84F752172F97A84500DF3082 /* DIPropertyWrapper.swift */; };
+		84F7521A2F97A97200DF3082 /* NotesViewModelType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84F752192F97A97200DF3082 /* NotesViewModelType.swift */; };
+		84F7521D2F97AAA800DF3082 /* Date+Format.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84F7521C2F97AAA800DF3082 /* Date+Format.swift */; };
+		84F7521F2F97AB7800DF3082 /* NoteListNoteModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84F7521E2F97AB7800DF3082 /* NoteListNoteModel.swift */; };
+		84F752212F97ACC800DF3082 /* NoteCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84F752202F97ACC800DF3082 /* NoteCellView.swift */; };
+		84F752232F97ACF600DF3082 /* NotesListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84F752222F97ACF600DF3082 /* NotesListView.swift */; };
+		84F7522B2F97AD7E00DF3082 /* NoteDetailViewModelType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84F7522A2F97AD7E00DF3082 /* NoteDetailViewModelType.swift */; };
+		84F7522D2F97AD9100DF3082 /* NoteDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84F7522C2F97AD9100DF3082 /* NoteDetailViewModel.swift */; };
+		84F7522F2F97ADC800DF3082 /* NoteDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84F7522E2F97ADC800DF3082 /* NoteDetailView.swift */; };
+		84F752312F97AE3E00DF3082 /* NoteDetailDataModelType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84F752302F97AE3E00DF3082 /* NoteDetailDataModelType.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -61,6 +73,18 @@
 		84F752032F97A23C00DF3082 /* UserDefaultsStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsStorage.swift; sourceTree = "<group>"; };
 		84F752062F97A26100DF3082 /* NotesRepositoryType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotesRepositoryType.swift; sourceTree = "<group>"; };
 		84F752082F97A26700DF3082 /* NotesRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotesRepository.swift; sourceTree = "<group>"; };
+		84F752122F97A56900DF3082 /* NotesListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotesListViewModel.swift; sourceTree = "<group>"; };
+		84F752152F97A80A00DF3082 /* BaseViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewModel.swift; sourceTree = "<group>"; };
+		84F752172F97A84500DF3082 /* DIPropertyWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DIPropertyWrapper.swift; sourceTree = "<group>"; };
+		84F752192F97A97200DF3082 /* NotesViewModelType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotesViewModelType.swift; sourceTree = "<group>"; };
+		84F7521C2F97AAA800DF3082 /* Date+Format.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Format.swift"; sourceTree = "<group>"; };
+		84F7521E2F97AB7800DF3082 /* NoteListNoteModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteListNoteModel.swift; sourceTree = "<group>"; };
+		84F752202F97ACC800DF3082 /* NoteCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteCellView.swift; sourceTree = "<group>"; };
+		84F752222F97ACF600DF3082 /* NotesListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotesListView.swift; sourceTree = "<group>"; };
+		84F7522A2F97AD7E00DF3082 /* NoteDetailViewModelType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteDetailViewModelType.swift; sourceTree = "<group>"; };
+		84F7522C2F97AD9100DF3082 /* NoteDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteDetailViewModel.swift; sourceTree = "<group>"; };
+		84F7522E2F97ADC800DF3082 /* NoteDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteDetailView.swift; sourceTree = "<group>"; };
+		84F752302F97AE3E00DF3082 /* NoteDetailDataModelType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteDetailDataModelType.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -110,6 +134,7 @@
 		84F751B82F979BE300DF3082 /* General */ = {
 			isa = PBXGroup;
 			children = (
+				84F752142F97A80300DF3082 /* Base */,
 				84F751CB2F979D3F00DF3082 /* Helpers */,
 				84F751C22F979C1C00DF3082 /* Extensions */,
 			);
@@ -129,6 +154,7 @@
 		84F751BA2F979BF000DF3082 /* PresentationLayer */ = {
 			isa = PBXGroup;
 			children = (
+				84F7520B2F97A54300DF3082 /* Screens */,
 				84F751CE2F979D7500DF3082 /* Navigation */,
 			);
 			path = PresentationLayer;
@@ -160,6 +186,7 @@
 		84F751C22F979C1C00DF3082 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				84F7521B2F97AA9C00DF3082 /* Date+Extension */,
 				84F751BD2F979C1500DF3082 /* JSONDecoder */,
 				84F751BF2F979C1500DF3082 /* JSONEncoder */,
 			);
@@ -207,6 +234,7 @@
 			isa = PBXGroup;
 			children = (
 				84F751CC2F979D4800DF3082 /* DIContainer.swift */,
+				84F752172F97A84500DF3082 /* DIPropertyWrapper.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -290,6 +318,134 @@
 			path = NotesRepository;
 			sourceTree = "<group>";
 		};
+		84F7520B2F97A54300DF3082 /* Screens */ = {
+			isa = PBXGroup;
+			children = (
+				84F752242F97AD5B00DF3082 /* NoteDetail */,
+				84F7520C2F97A54800DF3082 /* NotesListView */,
+			);
+			path = Screens;
+			sourceTree = "<group>";
+		};
+		84F7520C2F97A54800DF3082 /* NotesListView */ = {
+			isa = PBXGroup;
+			children = (
+				84F7520F2F97A55500DF3082 /* Data */,
+				84F7520E2F97A55200DF3082 /* Views */,
+				84F7520D2F97A54E00DF3082 /* Screen */,
+			);
+			path = NotesListView;
+			sourceTree = "<group>";
+		};
+		84F7520D2F97A54E00DF3082 /* Screen */ = {
+			isa = PBXGroup;
+			children = (
+				84F752222F97ACF600DF3082 /* NotesListView.swift */,
+			);
+			path = Screen;
+			sourceTree = "<group>";
+		};
+		84F7520E2F97A55200DF3082 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				84F752202F97ACC800DF3082 /* NoteCellView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		84F7520F2F97A55500DF3082 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				84F752112F97A56100DF3082 /* Models */,
+				84F752102F97A55D00DF3082 /* ViewModel */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		84F752102F97A55D00DF3082 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				84F752122F97A56900DF3082 /* NotesListViewModel.swift */,
+				84F752192F97A97200DF3082 /* NotesViewModelType.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		84F752112F97A56100DF3082 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				84F7521E2F97AB7800DF3082 /* NoteListNoteModel.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		84F752142F97A80300DF3082 /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				84F752152F97A80A00DF3082 /* BaseViewModel.swift */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
+		84F7521B2F97AA9C00DF3082 /* Date+Extension */ = {
+			isa = PBXGroup;
+			children = (
+				84F7521C2F97AAA800DF3082 /* Date+Format.swift */,
+			);
+			path = "Date+Extension";
+			sourceTree = "<group>";
+		};
+		84F752242F97AD5B00DF3082 /* NoteDetail */ = {
+			isa = PBXGroup;
+			children = (
+				84F752272F97AD6B00DF3082 /* Screen */,
+				84F752262F97AD6700DF3082 /* Views */,
+				84F752252F97AD6100DF3082 /* Data */,
+			);
+			path = NoteDetail;
+			sourceTree = "<group>";
+		};
+		84F752252F97AD6100DF3082 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				84F752292F97AD7600DF3082 /* ViewModel */,
+				84F752282F97AD7300DF3082 /* Models */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		84F752262F97AD6700DF3082 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		84F752272F97AD6B00DF3082 /* Screen */ = {
+			isa = PBXGroup;
+			children = (
+				84F7522E2F97ADC800DF3082 /* NoteDetailView.swift */,
+			);
+			path = Screen;
+			sourceTree = "<group>";
+		};
+		84F752282F97AD7300DF3082 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				84F752302F97AE3E00DF3082 /* NoteDetailDataModelType.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		84F752292F97AD7600DF3082 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				84F7522A2F97AD7E00DF3082 /* NoteDetailViewModelType.swift */,
+				84F7522C2F97AD9100DF3082 /* NoteDetailViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -365,14 +521,20 @@
 				84F751FF2F97A13100DF3082 /* WeatherDescriptionModelResponse.swift in Sources */,
 				84F751C02F979C1500DF3082 /* JSONEncoder+Default.swift in Sources */,
 				84F751CA2F979CF700DF3082 /* NoteModel.swift in Sources */,
+				84F7522B2F97AD7E00DF3082 /* NoteDetailViewModelType.swift in Sources */,
 				84F751F12F979FB600DF3082 /* WeatherModelResponse.swift in Sources */,
 				84F751ED2F979F1200DF3082 /* APIRequest.swift in Sources */,
+				84F7522F2F97ADC800DF3082 /* NoteDetailView.swift in Sources */,
+				84F7521D2F97AAA800DF3082 /* Date+Format.swift in Sources */,
 				84F751C82F979CCC00DF3082 /* WeatherInfoModel.swift in Sources */,
 				84F752022F97A22900DF3082 /* StorageServiceType.swift in Sources */,
+				84F752162F97A80A00DF3082 /* BaseViewModel.swift in Sources */,
 				84F751C12F979C1500DF3082 /* JSONDecoder+Default.swift in Sources */,
 				84F751FD2F97A11F00DF3082 /* MainWeatherModelResponse.swift in Sources */,
+				84F7521F2F97AB7800DF3082 /* NoteListNoteModel.swift in Sources */,
 				84F751F62F97A01500DF3082 /* WeatherServiceType.swift in Sources */,
 				84F752072F97A26100DF3082 /* NotesRepositoryType.swift in Sources */,
+				84F752232F97ACF600DF3082 /* NotesListView.swift in Sources */,
 				84F752042F97A23C00DF3082 /* UserDefaultsStorage.swift in Sources */,
 				84F751B32F979BDF00DF3082 /* ContentView.swift in Sources */,
 				84F751B42F979BDF00DF3082 /* Persistence.swift in Sources */,
@@ -380,11 +542,17 @@
 				84F751CD2F979D4800DF3082 /* DIContainer.swift in Sources */,
 				84F751FB2F97A05200DF3082 /* GetWeatherRequest.swift in Sources */,
 				84F752092F97A26700DF3082 /* NotesRepository.swift in Sources */,
+				84F752212F97ACC800DF3082 /* NoteCellView.swift in Sources */,
+				84F752182F97A84500DF3082 /* DIPropertyWrapper.swift in Sources */,
 				84F751EB2F979F0200DF3082 /* HTTPMethod.swift in Sources */,
 				84F751EF2F979F2100DF3082 /* NetworkServiceProtocol.swift in Sources */,
+				84F7522D2F97AD9100DF3082 /* NoteDetailViewModel.swift in Sources */,
+				84F752132F97A56900DF3082 /* NotesListViewModel.swift in Sources */,
 				84F751B62F979BDF00DF3082 /* WeatherNoteApp.swift in Sources */,
 				84F751F82F97A02500DF3082 /* WeatherService.swift in Sources */,
 				84F751E82F979EE500DF3082 /* NetworkManager.swift in Sources */,
+				84F7521A2F97A97200DF3082 /* NotesViewModelType.swift in Sources */,
+				84F752312F97AE3E00DF3082 /* NoteDetailDataModelType.swift in Sources */,
 				84F751D02F979D8200DF3082 /* AppRoute.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

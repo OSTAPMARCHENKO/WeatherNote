@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct WeatherInfoModel {
+struct WeatherInfoModel: Codable {
     let temp: Double?
     let description: String?
     let iconCode: String?
@@ -22,3 +22,4 @@ struct WeatherInfoModel {
         return Int(temp.rounded())
     }
 }
+
