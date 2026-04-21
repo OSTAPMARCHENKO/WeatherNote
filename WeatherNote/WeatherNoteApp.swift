@@ -19,3 +19,17 @@ struct WeatherNoteApp: App {
         }
     }
 }
+
+// Global setup function (can be moved to a separate file like AppSetup)
+func setupDependencies() {
+    let container = DIContainer.shared
+    
+    let network = NetworkService()
+    let weatherService = WeatherService(network: network)
+    let storage = UserDefaultsStorage()
+    
+    let repository = NotesRepository(weatherService: weatherService, storage: storage)
+    
+    container.register(NotesRepositoryType.self, service: repository)
+    container.register(AppRouter.self, service: AppRouter())
+}

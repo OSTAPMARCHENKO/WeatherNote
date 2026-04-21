@@ -7,14 +7,18 @@
 
 import Foundation
 
-struct WeatherInfo: Codable, Equatable, Hashable {
-    let temp: Double
-    let description: String
-    let iconCode: String
-    let locationName: String
+struct WeatherInfoModel {
+    let temp: Double?
+    let description: String?
+    let iconCode: String?
+    let locationName: String?
     
-    // Helper to get formatted temperature string
-    var formattedTemp: String {
-        return "\(Int(temp.rounded()))"
+    // Helper to get formatted temperature
+    var formattedTemp: Int? {
+        guard let temp else {
+            return nil
+        }
+        
+        return Int(temp.rounded())
     }
 }

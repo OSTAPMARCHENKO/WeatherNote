@@ -7,16 +7,16 @@
 
 import Foundation
 
-struct Note: Identifiable, Codable, Equatable, Hashable {
+struct NoteModel {
     let id: UUID
     let text: String
     let createdAt: Date
-    let weather: WeatherInfo?
+    let weather: WeatherInfoModel?
     
     init(id: UUID = UUID(),
          text: String,
          createdAt: Date = Date(),
-         weather: WeatherInfo? = nil
+         weather: WeatherInfoModel? = nil
     ) {
         self.id = id
         self.text = text
